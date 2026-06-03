@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="output.css">
+    <script>
+        function hi()
+        {
+            let textName=document.getElementById("textName")
+            let hmsg=document.getElementById("hmsg")
+            hmsg.innerHTML="welcome"+textname.value
+            textname.value=""
+        }
+        function gm(name)
+        {
+            alert("good morning"+name)
+        }
+
+    </script>
+</head>
+<body>
+    <p>ender your name:<input type="text" id="textname" class="border"></p>
+    <h2 id="hmsg"></h2>
+    <input type="button" class="h-8 w-32 bg-violent-600 text-white" value="click here" onclick="hi()">
+    <input type="button" class="h-8 w-32 bg-violent-600 text-white" value="click here" onclick="gm('Ram')">
+    <input type="button" class="h-8 w-32 bg-violent-600 text-white" value="click here" onclick="gm('Raam')">
+</body>
+</html>

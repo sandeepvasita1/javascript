@@ -1,0 +1,54 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="output.css">
+    <script>
+        function fun1()
+        {
+        var txtchar=document.getElementById("txtchar")
+        var hmsg=document.getElementById("hmsg")
+        let ch= txtchar.value.toUpperCase()
+         msg=""
+         alert(ch)
+        switch (ch) {
+            case "A":
+                msg="Vowel"
+                break
+                 case "E":
+                msg="Vowel"
+                break
+                 case "I":
+                msg="Vowel"
+                break
+                 case "O":
+                msg="Vowel"
+                break
+                 case "U":
+                msg="Vowel"
+                break
+            case "":
+                msg="emt"
+                break
+            default:
+                msg=""
+                break
+        }
+        hmsg.innerHTML=msg
+        txtchar.focus()
+        }
+    </script>
+
+</head>
+<body>
+    <div>
+        Enter any Charactor:
+        <input type="text"  id="txtchar" onkeyup="fun1()" maxlength="1">
+        <h2 id="hmsg"></h2>
+       
+    </div>
+
+</body>
+</html>
