@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="output.css">
+    <script>
+        function fun1()
+        {
+        var txtage=document.getElementById("txtage")
+        var hmsg=document.getElementById("hmsg")
+        var age=parseInt(txtage.value)
+        if(age>=18 && age<121)
+        {
+            hmsg.innerHTML="Eligible to vote"
+            hmsg.style.color="green"
+        }
+        else{
+            if(age<0 || age>120)
+            {
+                hmsg.innerHTML="Invalid age"
+                hmsg.style.backgroundColor="gray"
+            }
+            else{
+                hmsg.innerHTML="Not eligible to vote"
+                hmsg.style.color="red"
+
+            }
+        }
+        txtage.focus()
+        txtage.value=""
+        }
+    </script>
+</head>
+<body>
+    <p>
+        Enter age:<input type="text" id="txtage">
+        <input type="button" value="click here" onclick="fun1()" class="bg-color-blue-300">
+        <h2 id="hmsg"></h2>
+    </p>
+    
+    
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="output.css">
+    <script>
+        function showmonth()
+        {
+            var day=parseInt(document.getElementById("daynum").value);
+            var result=document.getElementById("result")
+            var dayname
+            switch (day) {
+                case 1:
+                    dayname="january"
+                    break;
+                    case 2:
+                    dayname="febuaey"
+                    break;
+                    case 3:
+                    dayname="march"
+                    break;
+                    case 4:
+                    dayname="april"
+                    break;
+                    case 5:
+                    dayname="may"
+                    break;
+                    case 6:
+                    dayname="jun"
+                    break;
+                    case 7:
+                    dayname="julay"
+                    break;
+                    case 8:
+                    dayname="ogust"
+                    break;
+                    case 9:
+                    dayname="saptember"
+                    break;
+                    case 10:
+                    dayname="octomber"
+                    break;
+                    case 11:
+                    dayname="navember"
+                    break;
+                    case 12:
+                    dayname="desember"
+                    break;
+            
+                default:
+                    dayname="invalid input number"
+                    break;
+            }
+            result.innerHTML=dayname
+        }
+    </script>
+</head>
+<body>
+    <input type="number" id="daynum" min="1" max="7">
+    <input type="button" value="Show month" ondblclick="showmonth()">
+    <p id="result"></p>
+</body>
+</html>

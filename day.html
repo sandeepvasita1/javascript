@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="output.css">
+    <script>
+        function showday()
+        {
+            var day=parseInt(document.getElementById("daynum").value);
+            var result=document.getElementById("result")
+            var dayname
+            switch (day) {
+                case 1:
+                    dayname="Monday"
+                    break;
+                    case 2:
+                    dayname="Thusday"
+                    break;
+                    case 3:
+                    dayname="Wednesday"
+                    break;
+                    case 4:
+                    dayname="Thusday"
+                    break;
+                    case 5:
+                    dayname="friday"
+                    break;
+                    case 6:
+                    dayname="satarday"
+                    break;
+                    case 7:
+                    dayname="sanday"
+                    break;
+            
+                default:
+                    dayname="invalid input number"
+                    break;
+            }
+            result.innerHTML=dayname
+        }
+    </script>
+</head>
+<body>
+    <input type="number" id="daynum" min="1" max="7">
+    <input type="button" value="Show day" ondblclick="showday()">
+    <p id="result"></p>
+</body>
+</html>

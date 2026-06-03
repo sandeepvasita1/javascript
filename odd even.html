@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="output.css">
+    <script>
+        function checknumber()
+        {
+            var number=document.getElementById("num").value;
+            var result=document.getElementById("result")
+            if(number % 2 == 0)
+        {
+            result.innerHTML="is an even number";
+        }
+        else
+        {
+           result.innerHTML="is an odd number";
+        }
+        }
+
+    </script>
+</head>
+<body>
+    <input type="number" id="num">
+    <input type="button" value="click here" onclick="checknumber()" class="bg-color-blue-800 text-white">
+    <p id="result"></p>
+</body>
+</html>

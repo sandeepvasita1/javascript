@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="output.css">
+    <script>
+        function checknumber()
+        {
+             var number=document.getElementById("num").value;
+            var result=document.getElementById("result")
+            if(number>0){
+                result.innerHTML="is positive"
+            }
+            else if(number<0)
+            {
+                 result.innerHTML="is nagative"
+            }
+            else{
+                 result.innerHTML="the nnumber is zero"
+            }
+        }
+    </script>
+</head>
+<body>
+    <input type="number" id="num">
+    <input type="button" value="check" onclick="checknumber()">
+    <p id="result"></p>
+</body>
+</html>

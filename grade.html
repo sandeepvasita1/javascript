@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="output.css">
+    <script>
+        function calculategrade()
+        {
+            var marks=parseInt(document.getElementById("marks").value);
+            var result=document.getElementById("result")
+
+            if(marks>=90 && marks<=100)
+        {
+            result.innerHTML="grade A"
+        }
+        else if(marks >=80 && marks <=90)
+        {
+            result.innerHTML="Grade B"
+        }
+         else if(marks >=70 && marks <=79)
+        {
+            result.innerHTML="Grade C"
+        }
+         else if(marks >=60 && marks <=69)
+        {
+            result.innerHTML="Grade D"
+        }
+         else if(marks >=0 && marks <=60)
+        {
+            result.innerHTML="Fail"
+        }
+        else
+        {
+            result.innerHTML="Please enter valid marks"
+        }
+        }
+    </script>
+</head>
+<body>
+    <input type="number" id="marks">
+    <input type="button" value="check grade" onclick="calculategrade()">
+    <p id="result"></p>
+</body>
+</html>
