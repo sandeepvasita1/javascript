@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="output.css">
+    <script>
+        function checkday()
+        {
+            var day=document.getElementById("day").value;
+            var result=document.getElementById("result")
+
+            if(day === "saturday" || day === "sunday")
+        {
+            result.innerHTML="Weekend"
+        }
+        else{
+            result.innerHTML="Weekday"
+        }
+        }
+    </script>
+</head>
+<body>
+    Enter Day:<input type="text" id="day">
+    <button onclick="checkday()">Check</button>
+    <p id="result"></p>
+</body>
+</html>

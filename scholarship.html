@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="output.css">
+    <script>
+        function checklogin()
+        {
+        var marks = document.getElementById("marks").value;
+        var attendance = document.getElementById("attendance").value;
+        var result = document.getElementById("result")
+
+        if(marks>80 && attendance>75)
+        {
+            result.innerHTML="Scholarship Eligibility"
+        }
+        else{
+            result.innerHTML="not Eligibil"
+        }
+        }
+
+
+
+    </script>
+</head>
+<body>
+    Marks:<input type="text" id="marks"><br><br>
+    Attendence:<input type="text" id="attendance"><br><br>
+
+
+    <button onclick="checklogin()">check</button>
+    <p id="result"></p>
+</body>
+</html>

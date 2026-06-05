@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="output.css">
+    <script>
+        function checkdiscount()
+        {
+            var customertype=document.getElementById("customertype").value;
+            var amount=document.getElementById("amount").value;
+            var result=document.getElementById("result")
+
+            if((customertype === "premium" && amount>=1000)|| amount>=5000)
+        {
+            result.innerHTML="Discount Applied"
+        }
+        else
+        {
+            result.innerHTML="NO discount"
+
+        }
+
+        }
+
+    </script>
+</head>
+<body>
+    <label>Customer Type:</label>
+    <input type="text" id="customertype"><br><br>
+
+    <label>Purchase Amount:</label>
+    <input type="number" id="amount"><br><br>
+
+    <button onclick="checkdiscount()">Check discount</button>
+    <p id="result"></p>
+</body>
+</html>
