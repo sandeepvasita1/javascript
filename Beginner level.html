@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Change Paragraph Text</title>
+    <link rel="stylesheet" href="output.css">
+</head>
+<body>
+    <p id="message">Click the button to chang this text</p>
+    <input type="button" onclick="Textclick()" value="click me" class="bg-blue-800 text-white text-lg font-bold">
+    <script>
+        function Textclick()
+        {
+            document.getElementById("message").innerText="Welcome to javaScript";
+        }
+    </script>
+    
+<h2>count:<span id="count">0</span></h2>
+<button onclick="incrementcount()">Click me</button>
+<script>
+    var counter=0;
+    function incrementcount()
+    {
+        counter++;
+        document.getElementById("count").innerText=counter;
+    }
+</script>
+    <h2>count:<span id="counts">0</span></h2>
+<button onclick="incrementcounts()">Click me</button>
+<script>
+    var counter=0;
+    function incrementcounts()
+    {
+        counter--;
+        document.getElementById("counts").innerText=counter;
+    }
+</script>
+<br><br>
+<p id="para">This is a paragraph. click the button to hide it.</p><br><br>
+<button onclick="hide()">Hide paragraph</button><br><br>
+<button onclick="show()">show paragraph</button>
+<script>
+    function hide()
+    {
+        document.getElementById("para").style.display="none"
+    }
+    function show()
+    {
+        document.getElementById("para").style.display="block";
+    }
+</script>
+<p id="paras">This is a paragraph</p>
+    <br>
+    <button onclick="toggleparagraph()">Toggle paragraph</button>
+    <script>
+        function toggleparagraph()
+        {
+            var paras=document.getElementById("paras");
+
+            if(paras.style.display==="none")
+        {
+            paras.style.display="block";
+        }
+        else{
+            paras.style.display="none";
+        }
+        }
+    </script>
+    <br>
+    <p id="myparagraph">This is a paragraph</p>
+    <button onclick="changfontsize()">Change font size</button>
+    <script>
+        function changfontsize()
+        {
+            document.getElementById("myparagraph").style.fontSize="30px";
+             document.getElementById("myparagraph").style.color="red";
+
+        }
+    </script>
+    <br><br>
+    <input type="number" id="num">
+    <button onclick="showtable()">Show table</button>
+    <p id="result"></p>
+    <script>
+        function showtable()
+        {
+            var number=document.getElementById("num").value;
+            var output="";
+
+            for(let i=1;i<=10;i++)
+        {
+            output += number + "*" + i + "=" + (number*i) + "<br>";
+        }
+        document.getElementById("result").innerHTML=output;
+
+        }
+    </script>
+    <br><br>
+    <button onclick="displaynumber()">Show NUmber</button>
+    <p id="result"></p>
+    <script>
+        function displaynumber()
+        {
+            let output="";
+
+            for(let i=1;i<=100;i++)
+        {
+            output += i + "<br>"
+        }
+        document.getElementById("result").innerHTML=output;
+        }
+    </script>
+    <br>
+    <br>
+    <button onclick="number()">Show number</button>
+    <p id="results"></p>
+    <script>
+        function number()
+        {
+            var output="";
+
+            for(let i=1;i<=100;i++)
+        {
+            if(i %5 ===0)
+        {
+            output += i + "<br>";
+        }
+        }
+        document.getElementById("results").innerHTML=output;
+        }
+    </script>
+    <br>
+    <br>
+    <button onclick="showSquares()">Show squares</button>
+    <p id="result"></p>
+    <script>
+        function showSquares()
+        {
+            let output="";
+
+            for(let i=1;i<=20;i++)
+        {
+            output += i + "² = " + (i * i) + "<br>";
+        }
+        document.getElementById("result").innerHTML=output;
+        }
+    </script>
+    <br>
+    <br>
+    <button onclick="showSquares()">Show squares</button>
+    <p id="result"></p>
+    <script>
+        function showSquares()
+        {
+            let output="";
+
+            for(let i=1;i<=20;i++)
+        {
+            output += i + "³ = " + (i * i * i) + "<br>";
+        }
+        document.getElementById("result").innerHTML=output;
+        }
+    </script>
+    <br>
+    <div id="box" style="width:100px;height: 100px;background: lightblue;"></div>
+    <br>
+    <button onclick="changwhight()">Chang width</button>
+    <script>
+        function changwhight()
+        {
+            document.getElementById("box").style.width="300px"
+            document.getElementById("box").style.height="300px"
+            document.getElementById("box").style.borderRadius="50%"
+
+        }
+    </script>
+    <br>
+    <div id="box" style="width:100px;height: 100px;background:gray;"></div>
+    <br>
+    <button onclick="randombgcolor()">Random background color</button>
+    <script>
+        function randombgcolor()
+        {
+            let color = "#" +Math.floor(Math.random() * 16777215).toString(16);
+            document.getElementById("box").style.backgroundColor=color;
+
+            
+        }
+    </script>
+   <br>
+   <p id="text">Random text color</p>
+   <button onclick="randomtextcolor()">Change text color</button>
+   <script>
+    function randomtextcolor()
+    {
+        let color = "#" +Math.floor(Math.random() * 16777215).toString(16);
+            document.getElementById("text").style.color=color;
+    }
+   </script>
+  
+</body>
+</html>
